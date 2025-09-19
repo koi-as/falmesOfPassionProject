@@ -13,11 +13,17 @@ def flames():
     n2=name2.get()
     namestr=n1+n2
     for i in namestr: # for the integer count of letters in namestr
-        if namestr.count(i) != 1: # if namestr.count(integer length of namestr) is not equal to 1 
-            namestr=namestr.replace(i,"") # replace all repeated letters with blank space. so result of 'google' + 'yahoo' would be 'leyah'
+        if namestr.count(i) != 1: 
+    # if namestr.count(integer length of namestr) is not equal to 1 
+            namestr=namestr.replace(i,"") 
+    # replace all repeated letters with blank space. so result of 'google' + 'yahoo' would be 'leyah'
  
-    number=len(namestr)%6 # getting count of new string name and taking remainder (modulus) of division by 6
+    number=len(namestr)%6 # getting count of new string name and taking remainder 
+    # (modulus) of division by 6
     global rel # what is global rel?
+    # Making a global rel, we are going to use the if else loop and show the 
+    # relationship using the number. To display the result we are going to use 
+    # the Label() method.
     rel=""
     if number==1:
         rel+="Friends"
